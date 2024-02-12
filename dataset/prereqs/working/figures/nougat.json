@@ -1,0 +1,253 @@
+[{
+  "caption": "Figure 5: Example of a page with many mathematical equations taken from [41]. Left: Image of a page in the document, Right: Model output converted to LaTeX and rendered to back into a PDF. Examples of scanned documents can be found in the appendix B.",
+  "captionBoundary": {
+    "x1": 63.63800048828125,
+    "x2": 532.8878173828125,
+    "y1": 498.288330078125,
+    "y2": 526.5870361328125
+  },
+  "figType": "Figure",
+  "imageText": ["Replica", "calculation", "of", "the", "generalization", "error", "To", "obtain", "Eqs.", "1,2,3,", "we", "follow", "the", "approach", "of", "Elizabeth", "Gardner", "and", "compute", "the", "volume", "Ω(xµ,T,", "κ)", "of", "solutions", "J", "which", "perfectly", "classify", "the", "training", "data", "up", "to", "a", "margin", "κ", "(known", "as", "the", "Gardner", "volume)", "[29,", "25].", "As", "κ", "grows,", "the", "volume", "of", "solutions", "shrinks", "until", "it", "reaches", "a", "unique", "solution", "at", "a", "critical", "κ,", "the", "max-margin", "solution.", "The", "Gardner", "volume", "Ω", "takes", "the", "form,", "Where", "⟨·⟩z", "represents", "an", "average", "over", "the", "pruned", "data", "distribution", "p(z)", "along", "the", "probe", "student.", "For", "any", "α,", "p(z),", "θ,", "these", "equations", "can", "be", "solved", "for", "the", "order", "parameters", "R,", "ρ,", "κ,", "from", "which", "the", "generalization", "error", "can", "be", "easily", "read", "off", "as", "εg", "=", "cos−1(R)/π.", "This", "calculation", "results", "in", "the", "solid", "theory", "curves", "in", "Figs", "1,2,3,", "which", "show", "an", "excellent", "match", "to", "numerical", "simulations.", "In", "the", "following", "section", "we", "will", "walk", "through", "the", "derivation", "of", "these", "equations", "using", "replica", "theory.", "In", "Section", "A.6", "we", "will", "derive", "an", "expression", "for", "the", "information", "gained", "per", "training", "example,", "and", "show", "that", "with", "Pareto", "optimal", "data", "pruning", "this", "information", "gain", "can", "be", "made", "to", "converge", "to", "a", "finite", "rate,", "resulting", "in", "at", "least", "exponential", "decay", "in", "test", "error.", "In", "Section", "A.7,", "we", "will", "show", "that", "super-exponential", "scaling", "eventually", "breaks", "down", "when", "the", "probe", "student", "does", "not", "match", "the", "teacher", "perfectly,", "resulting", "in", "power", "law", "scaling", "at", "at", "a", "minimum", "pruning", "fraction", "fmin(θ).", "∆(t,", "z)", "=", "z2", "(", "ρ2", "+", "cos2", "θ", "−", "2ρR", "cos", "θ", ")", "+", "2tz(R", "cos", "θ", "−", "ρ)", "+", "t2", "sin2", "θ.", "(6)", "Γ(t,", "z)", "=", "z(ρR−", "cos", "θ)−", "t(R−", "ρ", "cos", "θ),", "(5)", "Λ", "=", "√", "sin2", "θ", "−R2", "−", "ρ2", "+", "2ρR", "cos", "θ,", "(4)", "Where,", "(3)", "z", ")", "(κ−", "t)", "〉", "1−", "ρ2", ")(", "ρR−", "cos", "θ", "2Λ2", "(", "−∆(t,", "z)", "2πΛ", "exp", "+", "1", "√", "2π", "√", "1−", "ρ2", "H", "(", "Γ(t,", "z)√", "1−", "ρ2Λ", ")(", "z", "−", "ρt", "1−", "ρ2", ")", "(κ−", "t)", "e", "−", "(t−ρµ)2", "2(1−ρµ)2", "−∞", "dt", "〈∫", "κ", "sin2", "θ", "=", "2α", "ρ−R", "cos", "θ", "(2)", "z", "√", "2π", "√", "1−", "ρ2", "H", "(", "Γ(t,", "z)√", "1−", "ρ2Λ", ")", "(κ−", "t)2", "〉", "e−", "(t−ρµ)2", "2", "−∞", "dt", "〈∫", "κ", "sin2", "θ", "=", "2α", "1−", "ρ2", "+R2", "−", "2ρR", "cos", "θ", "(1)", "z", ")", "(κ−", "t)", "〉", "2Λ2", "(", "−∆(t,", "z)", "−∞", "dt", "exp", "〈∫", "κ", "α", "πΛ", "sin2", "θ", "=", "R−", "ρ", "cos", "θ", "Main", "result", "and", "overview", "Our", "main", "result", "is", "a", "set", "of", "self-consistent", "equations", "which", "can", "be", "solved", "to", "obtain", "the", "generalization", "error", "ε(α,", "p,", "θ)", "for", "any", "α", "and", "any", "data", "distribution", "p(z)", "along", "a", "probe", "student", "at", "any", "angle", "θ", "relative", "to", "the", "teacher.", "These", "equations", "take", "the", "form,", "After", "the", "dataset", "has", "been", "pruned,", "we", "consider", "training", "a", "new", "student", "J", "from", "scratch", "on", "the", "pruned", "dataset.", "A", "typical", "training", "algorithm", "(used", "in", "support", "vector", "machines", "and", "the", "solution", "to", "which", "SGD", "converges", "on", "separable", "data)", "is", "to", "find", "the", "solution", "J", "which", "classifies", "the", "training", "data", "with", "the", "maximal", "margin", "κ", "=", "minµ", "J", "·", "(yµxµ).", "Our", "goal", "is", "to", "compute", "the", "generalization", "error", "εg", "of", "this", "student,", "which", "is", "simply", "governed", "by", "the", "overlap", "between", "the", "student", "and", "the", "teacher,", "εg", "=", "cos−1(R)/π,", "where", "R", "=", "J", "·T/∥J∥2∥T∥2.", ")", "(Fig.", "2A).", "Jretle·T", "∥Jretle∥2∥T∥2", "In", "particular,", "consider", "pruning", "the", "training", "dataset", "by", "keeping", "only", "the", "examples", "with", "the", "smallest", "margin", "|zµ|", "=", "|Jprobe", "·", "xµ|", "along", "a", "probe", "student", "Jprobe.", "The", "pruned", "dataset", "will", "follow", "some", "dis-", "tribution", "p(z)", "along", "the", "direction", "of", "Jprobe,", "and", "remain", "isotropic", "in", "the", "nullspace", "of", "Jprobe.", "In", "what", "follows", "we", "will", "derive", "a", "general", "theory", "for", "an", "arbitrary", "data", "distribution", "p(z),", "and", "specialize", "to", "the", "case", "of", "small-margin", "pruning", "only", "at", "the", "very", "end", "(in", "which", "case", "p(z)", "will", "take", "the", "form", "of", "a", "truncated", "Gaussian).", "We", "will", "also", "make", "no", "assumptions", "on", "the", "form", "of", "the", "probe", "student", "Jprobe", "or", "the", "learning", "rule", "used", "to", "train", "it;", "only", "that", "Jprobe", "has", "developed", "some", "overlap", "with", "the", "teacher,", "quantified", "by", "the", "angle", "θ", "=", "cos−1", "("],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 63.0,
+    "x2": 539.0,
+    "y1": 210.8900146484375,
+    "y2": 490.8900146484375
+  }
+}, {
+  "caption": "Figure B.2: A selection of pages from a NASA conference from 1970 [46].",
+  "captionBoundary": {
+    "x1": 146.54100036621094,
+    "x2": 448.7362365722656,
+    "y1": 691.38037109375,
+    "y2": 697.8610229492188
+  },
+  "figType": "Figure",
+  "imageText": ["This,", "then,", "outlines", "a", "strategy", "for", "obtaining", "rates", "of", "reactions", "I,", "II,", "III,", "and", "V.", "First,", "a", "mixture", "rich", "in", "hydrogen", "is", "used", "to", "determine", "k2.", "Next,", "with", "k2", "known,", "a", "mixture", "with", "a", "trace", "of", "hydrogen", "and", "rich", "in", "carbon", "monoxide", "is", "used", "to", "deter-mine", "k3.", "Finally,", "with", "k3", "known,", "mixtures", "with", "excess", "oxygen", "and", "varying", "pro", "[CO]", ">", "[H2]", "−", "√", "2ν3ν5", "[H2]", ">", "[CO]", "−", "√", "2ν3ν1", "λ", "∼", "√", "2ν3(ν1", "+", "ν5)", "Whereas", "if", "there", "is", "a", "large", "amount", "of", "oxygen,", "ν2", "is", "large", "and", "λ", "∼", "√", "2ν2ν3", "If", "we", "choose", "a", "mixture", "with", "a", "large", "amount", "of", "carbon", "monoxide,", "ν5", "is", "large", "and", "ν2", "+", "(ν1", "+", "ν5)", "λ2", "≃", "2ν2ν3(ν1", "+", "ν5)", "On", "the", "other", "hand,", "if", "only", "a", "trace", "of", "hydrogen", "is", "present,", "ν3", "is", "small,", "the", "term", "involving", "λ", "may", "be", "neglected,", "and", "λ", "∼=", "2ν2", "If", "the", "amount", "of", "hydrogen", "in", "a", "mixture", "is", "large", "in", "comparison", "to", "oxygen,", "ν1", "and", "ν3", "are", "large", "and", "the", "term", "involving", "λ2", "may", "be", "neglected;", "in", "this", "event,", "[(ν1", "+", "ν5)", "+", "ν2", "+", "ν3]λ", "2", "+", "ν3(ν1", "+", "ν5)λ", "∼=", "2ν2ν3(ν1", "+", "ν5)", "equation", "(1).", "To", "begin", "with,", "under", "our", "experimental", "conditions", "ν4", "is", "gener-", "ally", "small", "in", "comparison", "with", "the", "other", "ν′′s", "and", "can", "be", "neglected", "for", "purposes", "of", "a", "qualitative", "discussion.", "Secondly,", "λ", "turns", "out", "to", "be", "a", "small", "positive", "root", "-", "of", "the", "order", "of", "the", "smaller", "ν", "values", "and", "small", "compared", "with", "the", "larger", "ν", "values.", "Thus,", "we", "neglect", "λ3", "in", "comparison", "with", "the", "other", "terms", "and", "rewrite", "equation", "(1):", "SELECTION", "OF", "GAS", "MIXTURES", "Let", "us", "turn", "now", "to", "the", "rationale", "used", "to", "select", "gas", "mixtures", "by", "analysis", "of", "Exponential", "growth", "constants", "were", "obtained", "from", "plots", "of", "the", "logarithm", "of", "observed", "light", "intensity", "against", "gas", "time;", "the", "relation", "between", "gas", "and", "labora-", "tory", "times", "was", "obtained", "from", "the", "computer", "calculations.", "Recently", "we", "showed", "that", "boundary", "layer", "effects", "must", "be", "considered", "in", "ana-", "lyzing", "data", "obtained", "behind", "incident", "shocks;", "the", "growing", "boundary", "layer", "causes", "increases", "in", "temperature,", "density,", "and", "residence", "time", "with", "increasing", "distance", "behind", "the", "shock.", "Conditions", "behind", "the", "shocks,", "in", "the", "region", "of", "the", "experi-", "mental", "measurements,", "were", "obtained", "from", "a", "computer", "program", "which", "integrated", "the", "equations", "of", "chemical", "change", "for", "a", "shocked", "gas", "accounting", "for", "the", "effects", "of", "boundary", "layer", "buildup.", "In", "general,", "the", "extent", "of", "chemical", "reaction", "was", "small,", "and", "changes", "in", "gas", "properties", "were", "brought", "about", "largely", "by", "the", "gas", "dynamics", "associated", "with", "boundary", "layer", "growth.", "Gas", "mixtures", "contained", "varying", "amounts", "of", "hydrogen,", "carbon", "monoxide,", "oxygen", "and", "in", "some", "mixtures", "carbon", "dioxide,", "diluted", "five", "to", "tenfold", "with", "argon.", "Hydrogen,", "oxygen,", "and", "argon", "were", "high", "purity", "tank", "gases", "and", "were", "used", "without", "further", "purification.", "Carbon", "monoxide", "was", "condensed", "at", "liquid", "nitrogen", "tem-", "perature;", "about", "one-quarter", "of", "the", "condensate", "was", "pumped", "off", "and", "discarded.", "Dry", "ice", "served", "as", "a", "convenient", "source", "of", "carbon", "dioxide.", "It", "was", "purified", "by", "sub-liming", "three-quarters", "of", "a", "sample", "into", "a", "liquid", "nitrogen", "cooled", "trap.", "The", "first", "quarter", "of", "this", "trapped", "fraction", "was", "discarded", "and", "the", "middle", "half", "used", "for", "mixture", "preparation.", "EXPERIMENTAL", "ASPECTS", "Growth", "constants", "were", "obtained", "by", "measuring", "the", "blue", "carbon", "monoxide", "flame", "band", "emission", "behind", "incident", "shocks.", "The", "intensity", "of", "this", "radiation", "is", "propor-", "tional", "to", "the", "product", "of", "carbon", "monoxide", "and", "oxygen", "atom", "concentrations", "(ref.", "3),", "and", "since", "very", "little", "carbon", "monoxide", "is", "consumed,", "the", "light", "monitors", "the", "increase", "of", "oxygen", "atom", "concentration", "with", "time.", "Here", "ν1", "=", "k1[H2],", "ν2", "=", "k2[O2],", "ν3", "=", "k3[H2],", "ν4", "=", "k4[O2][M", "],", "and", "ν5", "=", "k5[CO].", "Thus", "the", "exponential", "growth", "constant", "λ", "depends", "on", "the", "gas", "composi-", "tion", "and", "the", "rate", "constants", "of", "reactions", "I", "to", "V.", "This", "paper", "reports", "measurements", "on", "mixtures", "chosen", "to", "permit", "determinations", "of", "the", "rates", "of", "reactions", "I,", "II,", "III,", "and", "V.", "Mixtures", "were", "selected", "by", "analyzing", "equation", "(1)."],
+  "name": "B.2",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 63.0,
+    "x2": 559.0,
+    "y1": 90.8900146484375,
+    "y2": 683.8900146484375
+  }
+}, {
+  "caption": "Figure 1: Our simple end-to-end architecture followin Donut [28]. The Swin Transformer encoder takes a document image and converts it into latent embeddings, which are subsequently converted to a sequence of tokens in a autoregressive manner",
+  "captionBoundary": {
+    "x1": 63.63800048828125,
+    "x2": 533.28857421875,
+    "y1": 182.0303192138672,
+    "y2": 210.32904052734375
+  },
+  "figType": "Figure",
+  "imageText": ["Example", "This", "is", "an", "abstract.", "Lorem", "ipsum", "dolor", "sit", "amet,", "consectetur", "adipisicing", "elit,", "sed", "do", "eiusmod", "tempor", "incididunt", "ut", "labore", "et", "dolore", "magna", "aliqua."],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 75.0,
+    "x2": 520.0,
+    "y1": 73.8900146484375,
+    "y2": 172.8900146484375
+  }
+}, {
+  "caption": "Table 1: Results on arXiv test set. PDF is the text embedded in the PDF file. The modality “All” refers to the output text without any splitting. ∗Number of parameters.",
+  "captionBoundary": {
+    "x1": 63.308998107910156,
+    "x2": 531.6347045898438,
+    "y1": 282.7193298339844,
+    "y2": 300.1090087890625
+  },
+  "figType": "Table",
+  "imageText": ["All", "0.071", "89.1", "93.0", "93.5", "92.8", "93.1", "Tables", "0.211", "69.7", "79.1", "75.4", "80.7", "78.0", "Plain", "text", "0.058", "91.2", "94.6", "96.2", "95.3", "95.7", "Math", "0.128", "56.9", "75.4", "76.5", "76.6", "76.5", "Nougat", "base", "(350M∗)", "Nougat", "small", "(250M∗)", "All", "0.073", "88.9", "92.8", "93.6", "92.2", "92.9", "Tables", "0.220", "68.5", "78.6", "75.0", "79.8", "77.3", "Plain", "text", "0.058", "91.0", "94.3", "96.1", "95.3", "95.7", "Math", "0.117", "56.0", "74.7", "77.1", "76.8", "76.9", "+", "LaTeX", "OCR", "Plain", "text", "0.363", "57.4", "69.2", "82.1", "70.5", "75.9", "Math", "0.727", "0.3", "5.0", "11.0", "8.6", "9.7", "GROBID", "All", "0.312", "55.6", "71.9", "74.0", "72.1", "73.0", "Tables", "0.626", "25.1", "64.5", "61.4", "80.7", "69.7", "Method", "Modality", "Edit", "distance", "↓", "BLEU", "↑", "METEOR", "↑", "Precision", "↑", "Recall", "↑", "F1", "↑", "PDF", "All", "0.255", "65.8", "82.1", "77.1", "81.4", "79.2"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 65.0,
+    "x2": 528.0,
+    "y1": 71.8900146484375,
+    "y2": 278.8900146484375
+  }
+}, {
+  "caption": "Figure B.1: Example of an old calculus text book [45].",
+  "captionBoundary": {
+    "x1": 187.23800659179688,
+    "x2": 408.0387268066406,
+    "y1": 691.38037109375,
+    "y2": 697.8610229492188
+  },
+  "figType": "Figure",
+  "imageText": ["73.", "Arithmetic", "Mean.", "The", "arithmetic", "mean,", "A,", "of", "a", "series", "of", "n", "numbers,", "a1,", "a2,", "a3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,", "2.", "Find", "the", "pressure", "on", "a", "vertical", "semicircular", "gate", "whose", "diameter,", "10", "feet", "long,", "lies", "in", "the", "surface", "of", "the", "water.", "Exercises", "1.", "Find", "the", "pressure", "on", "the", "vertical", "parabolic", "gate,", "Fig.", "51:", "(a)", "if", "the", "edge", "AB", "lies", "in", "the", "surface", "of", "the", "water;", "(b)", "if", "the", "edge", "AB", "lies", "5", "feet", "below", "the", "surface.", "y", "√", "36−", "y2dy", ".", "0", "∫", "6", "P", "=", "2k", "3", "Then", "x2", "64", "+", "y2", "36", "=", "1.", "z", "is", "expressed", "in", "terms", "of", "y", "by", "means", "of", "the", "equation", "of", "the", "ellipse,", "yxdy", ".", "0", "∫", "6", "P", "=", "2k", "and", "the", "total", "pressure", "is", "2kyxdy", "the", "center,", "the", "axis", "of", "z", "horizontal", "and", "the", "axis", "of", "y", "positive", "downward.", "The", "element", "of", "pressure", "is", "The", "derivative", "of", "the", "sum", "of", "two", "functions", "is", "equal", "to", "the", "sum", "of", "their", "derivatives.", "d(u+", "v)", "dx", "=", "du", "dx", "+", "dv", "dx", ".", "or", "∆y", "∆x", "=", "∆u", "∆x", "+", "∆v", "∆x", "dy", "dx", "=", "du", "dx", "+", "dv", "dx", ",", "∆y", "=", "∆u+∆v", "y", "+∆y", "=", "u+∆u+", "v", "+∆v", "where", "u", "and", "v", "are", "functions", "of", "x.", "Let", "Du,", "Du,", "and", "Dy", "be", "the", "increments", "of", "u,", "v,", "and", "y,", "respectively,", "corresponding", "to", "the", "increment", "Dx.", "y", "=", "u+", "v,", "Let", "35", "The", "Derivative", "of", "the", "Sum", "of", "Two", "Functions", "The", "derivative", "of", "a", "constant", "is", "zero.", "Interpret", "this", "result", "geometrically.", "dy", "dx", "=", "0.", "or", "∆y", "∆x", "=", "0,", "lim", "∆x→0", "and", "∆y", "∆x", "=", "0,", "Let", "y", "=", "c,", "where", "c", "is", "a", "constant.", "Corresponding", "to", "any", "Dx,", "Dy", "=", "0,", "and", "consequently", "34", "The", "Derivative", "of", "a", "Constant", "where", "n", "is", "a", "positive", "fraction", "whose", "numerator", "and", "denominator", "are", "integers.", "This", "rule", "has", "already", "been", "used", "in", "the", "solution", "of", "numerous", "exercises.", "du∗", "dx", "=", "nu∗−1", "du", "dx", ",", "and", "the", "rule", "is", "proved", "that"],
+  "name": "B.1",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 63.0,
+    "x2": 540.0,
+    "y1": 90.8900146484375,
+    "y2": 683.8900146484375
+  }
+}, {
+  "caption": "Figure 2: List of the different image augmentation methods used during training on an example snippet form a sample document.",
+  "captionBoundary": {
+    "x1": 63.63800048828125,
+    "x2": 531.6367797851562,
+    "y1": 324.2843322753906,
+    "y2": 341.67401123046875
+  },
+  "figType": "Figure",
+  "imageText": ["Image", "Compression", "Gauss", "Noise", "Gaussian", "Blur", "Grid", "Distortion", "Elastic", "Transform", "Random", "Brightness", "Contrast", "Dilation", "Aﬃne", "Shift", "Scale", "Rotate", "Original", "Bitmap", "Erosion"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 75.0,
+    "x2": 520.0,
+    "y1": 73.98987579345703,
+    "y2": 316.8900146484375
+  }
+}, {
+  "caption": "Table A.1: Dataset composition",
+  "captionBoundary": {
+    "x1": 233.15499877929688,
+    "x2": 361.7925109863281,
+    "y1": 172.64634704589844,
+    "y2": 179.12701416015625
+  },
+  "figType": "Table",
+  "imageText": ["Total", "8,204,754", "arXiv", "7,511,745", "PMC", "536,319", "IDL", "446,777", "Name", "Number", "of", "Pages"],
+  "name": "A.1",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 239.0,
+    "x2": 356.0,
+    "y1": 100.8900146484375,
+    "y2": 171.8900146484375
+  }
+}, {
+  "caption": "Figure 6: Examples for repetition detection on logits. Top: Sample with repetition, Bottom: Sample without repetition. Left: Highest logit score for each token in the sequence ℓ(x), Center: Sliding window variance of the logits VarWinB [ℓ](x), Right: Variance of variance from the position to the end VarEndB [ℓ](x)",
+  "captionBoundary": {
+    "x1": 63.25899887084961,
+    "x2": 531.6377563476562,
+    "y1": 369.70733642578125,
+    "y2": 399.5010070800781
+  },
+  "figType": "Figure",
+  "imageText": ["n", "d", "V", "a", "rE", "150", "100", "50", "Sequence", "0", "500", "1000", "40", "60", "V", "ar", "W", "in", "20", "Sequence", "0", "500", "1000", "it", "s", "L", "og", "40", "30", "20", "Sequence", "0", "500", "1000", "d", "E", "n", "V", "ar", "15", "10", "5", "Sequence", "0", "2000", "4000", "in", "V", "a", "rW", "30", "20", "10", "Sequence", "0", "2000", "4000", "20", "30", "L", "o", "gi", "ts", "10", "Sequence", "0", "2000", "4000"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 88.96954345703125,
+    "x2": 511.0,
+    "y1": 83.22824096679688,
+    "y2": 339.4327697753906
+  }
+}, {
+  "caption": "Figure 3: Data processing. The source file is converted into HTML which is then converted to Markdown. a) The LaTeX source provided by the authors. b) The HTML file computed form the LaTeX source using LaTeXML. c) The Markdown file parsed from the HTML file. d) The PDF file provided by the authors",
+  "captionBoundary": {
+    "x1": 63.63800048828125,
+    "x2": 531.6390991210938,
+    "y1": 205.53135681152344,
+    "y2": 233.83001708984375
+  },
+  "figType": "Figure",
+  "imageText": ["<h2><span>1", "</span>Title</h2>", "<p>", "We", "study", "the", "formula", "</p>", "<math><mrow>", "<mi>E</mi><mo>=", "<mo>...</math>", "<p>", "as", "in", "</p>", "<cite>[1]</cite>", "b)", "html", "as", "in", "[1]", "\\[E=mc^{2}\\]", "(1)", "We", "study", "the", "formula", "#", "1", "Title", "d)", "pdfc)", "markdown", "We", "study", "the", "formula", "\\begin{equation}", "E=mc^{2}", "\\label{einstein}", "\\end{equation}", "as", "in", "\\cite{ein}", "\\section{Title}", "a)", "tex"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 76.0,
+    "x2": 519.0,
+    "y1": 74.8900146484375,
+    "y2": 192.42022705078125
+  }
+}, {
+  "caption": "Figure 6: Accuracy of prompt ranking. The fusion model most accurately pairs prompt and stories.",
+  "captionBoundary": {
+    "x1": 338.2458801269531,
+    "x2": 497.1953125,
+    "y1": 658.7540893554688,
+    "y2": 661.424072265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 497.1953125,
+    "x2": 543.0,
+    "y1": 651.4410400390625,
+    "y2": 668.7372436523438
+  }
+}, {
+  "caption": "Table 1: Consensus performance on VQA-Rephrasings dataset. CS(k) as defined in Eq. 2 is consensus score which is non-zero only if at least rephrasings are answered correctly, zero otherwise; averaged across all group of questions. ORI represent a split of questions from VQA-Rephrasings which are original questions from VQA v2.0 and their corresponding rephrasings are represented by the split REP. Models trained with our cycle-consistent (CC) framework consistently outperform their baseline counterparts at all values of .",
+  "captionBoundary": {
+    "x1": 357.84912109375,
+    "x2": 513.1622924804688,
+    "y1": 254.426513671875,
+    "y2": 267.075927734375
+  },
+  "figType": "Table",
+  "imageText": [],
+  "name": "1",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 513.1622924804688,
+    "x2": 537.0,
+    "y1": 93.8900146484375,
+    "y2": 333.5457763671875
+  }
+}, {
+  "caption": "Table 2: VQA Performance and ablation studies on VQA v2.0 validation and test-dev splits. Each row in blocks represents a component of our cycle-consistent framework added to the previous row. First row in each block represents the baseline VQA model . Q-consistency implies addition of a VQG module to generate rephrasings from the image and the predicted answer with an associated VQG loss . A-consistency implies passing all the generated questions to the VQA model and an associated loss . Gating implies the use of gating mechanism to filter undesirable generated questions in and passing the remaining to VQA model . Models trained with our cycle-consistent (last row in each block) framework consistently outperform baselines.",
+  "captionBoundary": {
+    "x1": 357.84912109375,
+    "x2": 514.156494140625,
+    "y1": 333.5457763671875,
+    "y2": 350.66015625
+  },
+  "figType": "Table",
+  "imageText": [],
+  "name": "2",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 335.0,
+    "x2": 537.0,
+    "y1": 350.66015625,
+    "y2": 378.8900146484375
+  }
+}, {
+  "caption": "Figure 4: Example for splitting the paragraphs in the source code into different pages. The points in blue denote the page index predicted by the SVM.",
+  "captionBoundary": {
+    "x1": 63.63800048828125,
+    "x2": 531.6377563476562,
+    "y1": 226.38633728027344,
+    "y2": 243.7760009765625
+  },
+  "figType": "Figure",
+  "imageText": ["Predictions", "Staircase", "ﬁt", "d", "ex", "e", "in", "P", "ag", "8", "6", "4", "2", "0", "Paragraph", "index", "0", "5", "10", "15", "20", "25", "30", "35", "40"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 194.28697204589844,
+    "x2": 406.0,
+    "y1": 80.8900146484375,
+    "y2": 207.007568359375
+  }
+}, {
+  "caption": "Figure B.3: Scan of a modern thesis with a mobile device camera, with permission from the author.",
+  "captionBoundary": {
+    "x1": 98.46700286865234,
+    "x2": 496.811279296875,
+    "y1": 691.38037109375,
+    "y2": 697.8610229492188
+  },
+  "figType": "Figure",
+  "imageText": ["By", "now", "applying", "the", "Dirac-Frenckle", "variational", "principle", "to", "the", "ansatz", "(eq.", "(2.9)),", "we", "obtain", "the", "respective", "Equations", "of", "Motion", "and", "therefore", "a", "set", "of", "coupled", "differential", "variationally", "[31,", "32].", "Due", "to", "the", "fact", "that", "a", "two", "layer", "scheme", "was", "used", "here", "(the", "time-dependent", "SPFs", "and", "the", "primitive", "basis),", "the", "exponential", "scaling", "of", "the", "DOFs,", "as", "nk,", "is", "smaller", "compared", "to", "the", "one", "layer", "method", "like", "the", "standard", "method.", "jk", "(qκ,", "t)", "are", "both", "time-dependent", "and", "optimized", "Where", "ΦJ", "describes", "the", "f", "-dimensional", "product", "of", "the", "SPFs,", "the", "Hartree", "product.", "The", "complex", "expansion", "coefficients", "AJ", "and", "the", "basis", "functions", "φκ", "AJΦJ", ".", "(2.9)", "j", "=", "∑", "φκ", "jk", "(qκ,", "t)", "(2.8)", "κ=1", "f∏", "Aj1...jf", "(t)", "jf=1", "nf∑", "...", "j1=1", "n1∑", "Ψ", "(q1,", "...,", "qf", ",", "t)", "=", "The", "SPFs", "are", "represented", "as", "a", "linear", "combination", "of", "the", "time-independent", "primitive", "basis", "functions.", "The", "ansatz", "for", "MCTDH", "method", "can", "now", "be", "written", "as", "the", "following:", "〉", ".", "(2.7)", "iκ", "(qκ)", "(t)", "∣∣∣χ(κ)", "c", "(κ)", "iκjκ", "iκ=1", "∣∣φκ", "jk", "(qκ,", "t)", "〉", "=", "Nκ∑", "In", "the", "multiconfiguration", "time-dependent", "Hartree", "method", "(MCTDH", "method)", "the", "scaling", "is", "softened", "by", "introducing", "a", "smaller", "but", "now", "time-dependent", "basis,", "the", "so-called", "single", "particle", "func-", "tions", "(SPFs)", "and", "only", "the", "time-dependent", "expansion", "coefficients", "are", "optimized", "variationally", "[31,", "32].", "The", "problem", "with", "the", "standard", "method", "is", "the", "exponential", "scaling", "as", "the", "number", "of", "coefficients", "increase", "with", "Nf", ".", "Therefore,", "the", "standard", "method", "is", "only", "suited", "for", "problems", "with", "less", "than", "6", "DOFs.", "jk", "(qκ)", "Hereby,", "f", "represents", "the", "degrees", "of", "freedom", "(DOF),", "Cj1...jf", "(t)", "denotes", "the", "time-dependent", "expansion", "coefficients", "and", "Nκ", "describes", "the", "number", "of", "basis", "functions", "used", "for", "representing", "the", "κth", "DOF.", "The", "orthonormal", "time-independent", "primitive", "basis", "functions", "are", "represented", "by", "χκ", "χκ", "jk", "(qκ)", "(2.6)", "κ=1", "f∏", "Cj1...jf", "(t)", "jf=1", "Nf∑", "...", "j1=1", "N1∑", "Ψ", "(q1,", "...,", "qf", ",", "t)", "=", "time-independent", "basis-set", "functions.", "Since", "the", "models", "discussed", "in", "this", "work", "modeled", "after", "the", "octahedral", "W(CO)6", "molecule", "and", "thus", "exhibit", "non-Abelian", "point", "group", "symmetry,", "the", "various", "possible", "couplings", "have", "(", "Γ(q)", ")r", "×", "(", "Γ(Q)", ")s", "⊂", "ΓA.", "(2.5)", "2.1.2.", "Anharmonic", "Coupling", "Terms", "Under", "specific", "symmetry", "considerations", "not", "all", "intramolecular", "coupling", "orders", "(r,", "s)", "are", "relevant.", "In", "this", "specific", "case", "only", "orders", "with", "r+", "s", "≤", "3", "are", "considered.", "Since", "all", "considered", "coordinates", "are", "intramolecular", "normal", "modes", "the", "bilinear", "coupling", "(1,", "1)", "is", "in", "this", "case", "equal", "to", "zero.", "Generally,", "all", "terms", "of", "the", "potential", "energy", "have", "to", "transform", "according", "to", "the", "totally", "symmetric", "representation", "of", "the", "molecules", "point", "group.[26]", "Thus", "according", "to", "the", "following", "equation:", "Here", "the", "uncoupled", "states", "are", "described", "by", "the", "kets", "where", "the", "first", "term", "describes", "the", "excitation", "in", "the", "cavity", "state,", "the", "second", "term", "describes", "the", "excitation", "in", "the", "high", "frequency", "mode", "and", "the", "last", "term", "is", "the", "excitation", "in", "the", "Q", "mode.", "2", ".", "(2.4)", "|ψ(UP,LP", ");", "0⟩", "=", "|1c,", "0,", "0⟩", "±", "|0c,", "1,", "0⟩√", "Here", "ωq", "describes", "the", "fundamental", "frequency", "of", "the", "molecular", "mode", "q", "which", "is", "coupled", "to", "the", "cavity", "and", "the", "respective", "degrees", "of", "freedom", "are", "expressed", "with", "the", "ladder", "operators,", "b̂†", "and", "b̂.", "In", "the", "second", "part,", "a", "lower", "energy", "vibrational", "mode", "Q", "is", "described", "with", "its", "respective", "frequency", "ωQ", "and", "the", "corresponding", "ladder", "operators", "(ĉ†,", "ĉ).", "The", "last", "term", "describes", "the", "general", "form", "of", "the", "third", "order", "couplings,", "where", "ηr,s", "describes", "the", "anharmonic", "coupling", "constants", "and", "will", "be", "referred", "to", "by", "Ŵ", ".[4]", "To", "obtain", "the", "corresponding", "eigenvector", "for", "the", "upper", "and", "lower", "polariton,", "the", "Hamiltonian", "matrix", "is", "diagonalized.", "By", "doing", "this", "one", "arrives", "at", "the", "following", "expression", "for", "the", "polaritons:[22,", "25]", "(", "b̂†", "+", "b̂", ")r", "(", "ĉ†", "+", "ĉ", ")s", ".", "(2.3)", "ηqQr,s", "r,s", "Ĥmol", "=", "h̄ωq(b̂", "†b̂)", "+", "h̄ωQ(ĉ", "†ĉ)", "+", "3∑", "2.1.", "Molecules", "in", "Cavities", "The", "molecular", "Hamiltonian", "describes", "the", "vibrational", "modes", "as", "harmonic", "oscillators", "which", "are", "coupled", "to", "each", "other", "by", "a", "third", "order", "anharmonic", "coupling", "term.", "This", "term", "is", "obtained", "by", "using", "a", "Taylor", "expansion", "of", "the", "the", "harmonic", "potential", "and", "therefore", "includes", "a", "mediator", "for", "the", "IVR", "pathways", "in", "the", "model.", "So", "the", "molecular", "Hamiltonian", "for", "two", "separate", "modes", "(q,Q)", "in", "the", "molecular", "part", "is", "described", "by:"],
+  "name": "B.3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 63.0,
+    "x2": 540.0,
+    "y1": 90.8900146484375,
+    "y2": 683.8900146484375
+  }
+}]
